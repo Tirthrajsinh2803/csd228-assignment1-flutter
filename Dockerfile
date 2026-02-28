@@ -59,7 +59,8 @@ ARG ANDROID_SDK_VERSION=36
 ENV ANDROID_HOME=/opt/android-sdk
 
 # Configure the Android SDK conmmand line tools.
-COPY cmdline-tools ${ANDROID_HOME}/cmdline-tools/latest/
+# FIX: copy the *contents of cmdline-tools/latest* into the container's latest folder
+COPY cmdline-tools/latest/ ${ANDROID_HOME}/cmdline-tools/latest/
 ENV PATH="${ANDROID_HOME}/cmdline-tools/latest/bin:${PATH}"
 
 RUN echo "y" | sdkmanager --install --sdk_root="${ANDROID_HOME}" \

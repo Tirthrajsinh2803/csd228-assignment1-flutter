@@ -13,15 +13,16 @@
 			"platform": "linux/amd64"
 		}
 	},
+
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	 "forwardPorts": [
-		 // Expose the web dev server port: https://docs.flutter.dev/platform-integration/web/web-dev-config-file#basic-server-configuration.
-		 // This should be kept in sync with the ../web_dev_config.yaml file
-		 8080,
-	 ],
+	"forwardPorts": [
+		// Expose the web dev server port: https://docs.flutter.dev/platform-integration/web/web-dev-config-file#basic-server-configuration.
+		// This should be kept in sync with the ../web_dev_config.yaml file
+		8080
+	],
 
 	// Uncomment the next line to run commands after the container is created.
 	// "postCreateCommand": "cat /etc/os-release",
